@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="zh-CN"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;AI 每日情报 | AI Intelligence Daily&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;family=Noto+Serif+SC:wght@700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--bg: #080808;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--card: #141414;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--gold: #f3c344;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--gold-dim: #b8860b;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--text-main: #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--text-gray: #888;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--border: rgba(243, 195, 68, 0.15);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { background: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; padding: 15px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Header Area */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>header { padding: 20px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; text-align: center; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tag { font-size: 10px; color: var(--gold); letter-spacing: 3px; font-weight: 800; margin-bottom: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 { font-family: 'Noto Serif SC', serif; font-size: 28px; background: linear-gradient(180deg, #fff, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.meta-bar { font-size: 12px; color: var(--text-gray); margin-top: 10px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.disclaimer { font-size: 11px; background: rgba(243, 195, 68, 0.1); padding: 4px 12px; border-radius: 20px; color: var(--gold); margin-top: 10px; display: inline-block; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Scoring Legend */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.score-legend { font-size: 10px; color: var(--text-gray); text-align: center; margin-bottom: 20px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Accordion Structure */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.accordion-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; overflow: hidden; transition: 0.3s; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.accordion-header { padding: 16px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.accordion-header:hover { background: rgba(243, 195, 68, 0.05); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-title { font-weight: 800; font-size: 16px; display: flex; align-items: center; gap: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.arrow { width: 12px; transition: 0.3s; fill: var(--gold); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.accordion-content { max-height: 0; transition: max-height 0.4s ease-out; background: #1a1a1a; padding: 0 16px; overflow: hidden; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.active .accordion-content { max-height: 2000px; padding: 20px 16px; border-top: 1px solid #222; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.active .arrow { transform: rotate(180deg); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Item Styles */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.news-item { margin-bottom: 25px; position: relative; padding-left: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.news-item:last-child { margin-bottom: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.score-badge { display: inline-block; background: var(--gold); color: #000; font-size: 10px; font-weight: 900; padding: 1px 6px; border-radius: 4px; margin-right: 8px; vertical-align: middle; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.news-title { font-weight: 700; font-size: 15px; color: #fff; margin-bottom: 8px; }</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.analysis-grid { display: grid; grid-template-columns: 1fr; gap: 8px; font-size: 13px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.grid-row { display: flex; gap: 8px; margin-bottom: 4px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.label { color: var(--gold); font-weight: 800; min-width: 50px; font-size: 11px; flex-shrink: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.action-box { background: rgba(243, 195, 68, 0.08); padding: 10px; border-radius: 8px; border-left: 3px solid var(--gold); margin-top: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.stock-tag { color: #52c41a; font-weight: 600; font-size: 12px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Footer */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>footer { text-align: center; color: var(--text-gray); font-size: 11px; padding: 40px 0; border-top: 1px solid #222; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="tag"&gt;AI INTELLIGENCE DAILY&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;AI 每日情报&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="disclaimer"&gt;✨ 精选甄别 + 实时抓取系统&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="meta-bar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;📅 2026.03.02&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🔍 扫描信源: 52&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🎯 核心标的: 8&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="score-legend"&gt;打分规则：基于市场冲击力(30%)、技术原创性(40%)、行业指导价值(30%)评定&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="accordion-item active"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="accordion-header" onclick="toggleAccordion(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-title"&gt;🧠 元洞察 Meta Insights&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg class="arrow" viewBox="0 0 20 20"&gt;&lt;path d="M5 7l5 5 5-5z"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="accordion-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="news-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="news-title"&gt;📈 今日趋势：具身智能的“标准底座”已成型&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p style="font-size: 13px; color: var(--text-gray);"&gt;中国发布首个人形机器人国家标准体系，标志着产业从“散兵游勇”进入“大工业化”生产阶段。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="action-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="label"&gt;⚠️ 风险预警&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="content" style="font-size: 13px;"&gt;警惕“数据洗稿”引发的国际版权诉讼，Anthropic 针对国产模型的指控可能引发合规性回溯。&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="accordion-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="accordion-header" onclick="toggleAccordion(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-title"&gt;🌐 行业动态 Industry Feed&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg class="arrow" viewBox="0 0 20 20"&gt;&lt;path d="M5 7l5 5 5-5z"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="accordion-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="news-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="score-badge"&gt;9.5&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="news-title"&gt;中国发布人形机器人及具身智能国家标准体系 (2026版)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="analysis-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid-row"&gt;&lt;span class="label"&gt;WHAT&lt;/span&gt;内容涵盖大脑、小脑、安全伦理等六大核心维度。&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid-row"&gt;&lt;span class="label"&gt;WHY&lt;/span&gt;解决了 300 多款国产模型互不兼容的痛点，加速商业部署。&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="action-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="label"&gt;📍 IMPACT&lt;/span&gt;具身智能进入“标准件”时代。标的：&lt;span class="stock-tag"&gt;三花智控、鸣志电器&lt;/span&gt;。</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="accordion-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="accordion-header" onclick="toggleAccordion(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-title"&gt;💰 投融资消息 Funding News&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg class="arrow" viewBox="0 0 20 20"&gt;&lt;path d="M5 7l5 5 5-5z"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="accordion-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="news-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="score-badge"&gt;10.0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="news-title"&gt;OpenAI 锁定 1100 亿美元融资，亚马逊、NVIDIA 深度绑定&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="analysis-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid-row"&gt;&lt;span class="label"&gt;WHY&lt;/span&gt;估值冲向 7300 亿美元，标志着 AGI 基建进入“万亿级”竞赛。&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="action-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="label"&gt;📍 IMPACT&lt;/span&gt;算力霸权进一步固化。标的：&lt;span class="stock-tag"&gt;工业富联、浪潮信息&lt;/span&gt;。</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>© 2026 AI Intelligence Daily | Curated with Gemini 3 Flash&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>智库支持：X (AlphaSignal), 华尔街见闻RSS, 机器之心</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function toggleAccordion(element) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const item = element.parentElement;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>item.classList.toggle('active');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
